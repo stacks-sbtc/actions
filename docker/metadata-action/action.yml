@@ -1,0 +1,19 @@
+name: "Docker Metadata"
+
+inputs:
+  images:
+    description: "List of Docker images to use as base name for tags"
+    required: false
+  tags:
+    description: "List of tags as key-value pair attributes"
+    required: false
+
+runs:
+  using: "composite"
+  steps:
+    - name: Docker Metadata
+      id: docker_metadata
+      uses: docker/metadata-action@902fa8ec7d6ecbf8d84d538b9b233a880e428804 # v5.7.0
+      with:
+        images: ${{ inputs.images }}
+        tags: ${{ inputs.tags }}

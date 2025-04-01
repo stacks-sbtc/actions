@@ -1,0 +1,16 @@
+name: Setup Mold
+
+inputs:
+  make-default:
+    description: "Make mold the default linker"
+    required: false
+    default: true
+
+runs:
+  using: "composite"
+  steps:
+    - name: Setup mold
+      id: setup_mold
+      uses: rui314/setup-mold@f80524ca6eeaa76759b57fb78ddce5d87a20c720 # v1
+      with:
+        make-default: ${{ inputs.make-default }}
