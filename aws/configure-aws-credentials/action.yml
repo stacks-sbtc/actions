@@ -6,7 +6,7 @@ inputs:
     required: true
   role-to-assume:
     description: The Amazon Resource Name (ARN) of the role to assume.
-    required: false
+    required: true
 
 runs:
   using: "composite"

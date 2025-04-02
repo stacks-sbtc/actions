@@ -10,7 +10,6 @@ Generate signed build provenance attestations for workflow artifacts
 | ------------------ | -------------------------------------------------------------- | -------- | ------- |
 | `subject-name`     | Subject name as it should appear in the attestation            | true     |         |
 | `subject-digest`   | Digest of the subject for which provenance will be generated   | true     |         |
-| `push-to-registry` | Whether to push the provenance statement to the image registry | false    | `false` |
 
 ## Usage
 
@@ -28,5 +27,4 @@ jobs:
         with:
           subject-name: index.docker.io/${{ env.docker-org }}/sbtc
           subject-digest: ${{ steps.docker_build.outputs.digest }}
-          push-to-registry: true
 ```

@@ -7,10 +7,6 @@ inputs:
   subject-digest:
     description: Digest of the subject for which provenance will be generated
     required: true
-  push-to-registry:
-    description: Whether to push the provenance statement to the image registry
-    default: false
-    required: false
 
 runs:
   using: "composite"
@@ -21,4 +17,4 @@ runs:
       with:
         subject-name: ${{ inputs.subject-name }}
         subject-digest: ${{ inputs.subject-digest }}
-        push-to-registry: ${{ inputs.push-to-registry }}
+        push-to-registry: true

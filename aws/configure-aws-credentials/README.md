@@ -8,7 +8,7 @@ Configure the AWS credentials and region environment variables for use in other 
 
 | Input            | Description                                           | Required | Default |
 | ---------------- | ----------------------------------------------------- | -------- | ------- |
-| `role-to-assume` | The Amazon Resource Name (ARN) of the role to assume. | false    |         |
+| `role-to-assume` | The Amazon Resource Name (ARN) of the role to assume. | true     |         |
 | `aws-region`     | AWS Region                                            | true     |         |
 
 ## Usage
