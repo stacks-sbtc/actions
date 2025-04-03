@@ -8,6 +8,7 @@ Monorepo of composite actions used in the stacks-sbtc organisation
 - [cleanup](./cleanup) - Removes unused packages/dirs from a runner, freeing around 30GB of space on a runner
 - [docker](./docker) - Setup docker on the runner and optionally log in to dockerhub
 - [download-artifact](./download-artifact) - Download one or more artifacts from GitHub
+- [github-pages](./github-pages) - Configure, upload and deploy GitHub Pages
 - [github-script](./github-script) - Execute JavaScript code within the runner
 - [install-action](./install-action) - Install development tools
 - [setup-buf](./setup-buf) - Install `buf` tool to build, lint and format

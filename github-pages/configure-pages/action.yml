@@ -1,0 +1,8 @@
+name: Configure Pages
+
+runs:
+  using: "composite"
+  steps:
+    - name: Configure Pages
+      id: configure_pages
+      uses: actions/configure-pages@983d7736d9b0ae728b81ab479565c72886d7745b # v5.0.0
