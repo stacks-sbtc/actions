@@ -5,10 +5,11 @@ Login to dockerhub
 ## Documentation
 
 ### Inputs
-| Input      | Description          | Required | Default |
-| ---------- | -------------------- | -------- | ------- |
-| `username` | Docker repo username | true     |         |
-| `password` | Docker repo password | true     |         |
+| Input      | Description                       | Required | Default    |
+| ---------- | --------------------------------- | -------- | ---------- |
+| `username` | Docker repo username              | true     |            |
+| `password` | Docker repo password              | true     |            |
+| `registry` | Server address of Docker registry | false    | Docker Hub |
 
 ## Usage
 
@@ -26,4 +27,5 @@ jobs:
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_PASSWORD }}
+          registry: ghcr.io
 ```

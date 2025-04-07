@@ -9,6 +9,9 @@ inputs:
     description: "Docker password"
     required: false
     default: ""
+  registry:
+    description: "Server address of Docker registry"
+    required: false
 
 runs:
   using: "composite"
@@ -64,3 +67,4 @@ runs:
       with:
         username: ${{ inputs.username }}
         password: ${{ inputs.password }}
+        registry: ${{ inputs.registry }}

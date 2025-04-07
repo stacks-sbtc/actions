@@ -7,6 +7,9 @@ inputs:
   password:
     description: "Docker password"
     required: true
+  registry:
+    description: "Server address of Docker registry"
+    required: false
 
 runs:
   using: "composite"
@@ -17,3 +20,4 @@ runs:
       with:
         username: ${{ inputs.username }}
         password: ${{ inputs.password }}
+        registry: ${{ inputs.registry }}

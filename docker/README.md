@@ -16,10 +16,11 @@ This folder also contains wrappers over other specific docker actions that the m
 ## Documentation
 
 ### Inputs
-| Input      | Description          | Required | Default |
-| ---------- | -------------------- | -------- | ------- |
-| `username` | Docker repo username | false    | `""`    |
-| `password` | Docker repo password | false    | `""`    |
+| Input      | Description                       | Required | Default    |
+| ---------- | --------------------------------- | -------- | ---------- |
+| `username` | Docker repo username              | false    | `""`       |
+| `password` | Docker repo password              | false    | `""`       |
+| `registry` | Server address of Docker registry | false    | Docker Hub |
 
 ## Usage
 
@@ -37,4 +38,5 @@ jobs:
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_PASSWORD }}
+          registry: ghcr.io
 ```
