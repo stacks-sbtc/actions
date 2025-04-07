@@ -19,3 +19,14 @@ Monorepo of composite actions used in the stacks-sbtc organisation
 - [setup-rust-toolchain](./setup-rust-toolchain) - Install Rust toolchain with additional components
 - [upload-artifact](./upload-artifact) - Upload an artifact to the GitHub's workflow
 - [wait-other-jobs](./wait-other-jobs) - Wait for all or specific jobs to finish
+
+## Repo Structure
+
+This repo is structured as a typical monorepo, with agnostic [composite actions](https://docs.github.com/en/actions/sharing-automations/creating-actions/creating-a-composite-action) at the top level. Repository specific [composite actions](https://docs.github.com/en/actions/sharing-automations/creating-actions/creating-a-composite-action) are added at the top level, for example `./aws/amazon-ecr-login`.
+
+At a minimum, any new composite actions will need the following 2 files:
+
+- `action.yml` - The composite action workflow (ex: [docker/action.yml](./docker/action.yml))
+- `README.md` - How to use the composite action (ex: [docker/README.md](./docker/README.md))
+
+There may or may not be additional folders/logic depending upon the complexity of the workflow, the above 2 files are the minimum requirement.
