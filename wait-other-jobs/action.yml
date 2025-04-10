@@ -1,0 +1,31 @@
+name: Wait Other Jobs
+
+inputs:
+  wait-seconds-before-first-polling:
+    description: "Wait this seconds before first polling"
+    required: false
+    default: "10"
+  min-interval-seconds:
+    description: "Wait this interval or the multiplied value (and jitter)"
+    required: false
+    default: "15"
+  retry-method:
+    description: "How to wait for next polling"
+    required: false
+    default: "equal_intervals"
+  wait-list:
+    description: "Wait only these jobs"
+    required: false
+    default: "[]"
+
+runs:
+  using: "composite"
+  steps:
+    - name: Wait Other Jobs
+      id: wait_other_jobs
+      uses: kachick/wait-other-jobs@215c93f93f91e8f9a5ccb7fc0cc78220c9fd8a99 # v3.8.0
+      with:
+        retry-method: ${{ inputs.retry-method }}
+        wait-seconds-before-first-polling: ${{ inputs.wait-seconds-before-first-polling }}
+        min-interval-seconds: ${{ inputs.min-interval-seconds }}
+        wait-list: ${{ inputs.wait-list }}

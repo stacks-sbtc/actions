@@ -1,0 +1,19 @@
+name: Download Artifact
+
+inputs:
+  name:
+    description: "Name of the artifact to download. If unset, all artifacts are downloaded"
+    required: false
+  path:
+    description: "Destination path"
+    required: false
+
+runs:
+  using: "composite"
+  steps:
+    - name: Download Artifact
+      id: download_artifact
+      uses: actions/download-artifact@95815c38cf2ff2164869cbab79da8d1f422bc89e # v4.2.1
+      with:
+        name: ${{ inputs.name }}
+        path: ${{ inputs.path }}

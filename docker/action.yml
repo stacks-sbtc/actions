@@ -1,0 +1,70 @@
+name: "Docker Setup"
+
+inputs:
+  username:
+    description: "Docker username"
+    required: false
+    default: ""
+  password:
+    description: "Docker password"
+    required: false
+    default: ""
+  registry:
+    description: "Server address of Docker registry"
+    required: false
+
+runs:
+  using: "composite"
+  steps:
+    ## Cleanup Runner
+    - name: Cleanup Runner
+      id: cleanup_runner
+      uses: stacks-sbtc/actions/cleanup@main
+
+    ## Checkout Code
+    - name: Checkout Repository
+      id: checkout_repository
+      uses: stacks-sbtc/actions/checkout@main
+
+    ## Set Build Vars
+    - name: Set Vars
+      id: set_vars
+      shell: bash
+      run: |
+        event=${{ github.event_name }}
+        case ${event} in
+          pull_request|pull_request_target|pull_request_review)
+            echo "[PR]: true"
+            branch=${{ github.event.pull_request.head.ref }}
+            ;;
+          *)
+            echo "[PR]: false"
+            branch=${GITHUB_REF#refs/heads/}
+            ;;
+        esac
+        printf "BRANCH_NAME=$branch\n" >> $GITHUB_ENV
+        printf "GITHUB_SHA_SHORT=${GITHUB_SHA::7}\n" >> $GITHUB_ENV
+        printf "GITHUB_REF_SHORT=${GITHUB_REF#refs/*/}\n" >> $GITHUB_ENV
+        printf "DOCKER_PUSH=${{ (inputs.username != '') && (inputs.password != '') }}\n" >> $GITHUB_ENV
+
+    ## Setup QEMU (Multi-Arch Builds)
+    - name: Setup QEMU
+      id: setup_qemu
+      uses: stacks-sbtc/actions/docker/setup-qemu-action@main
+
+    ## Setup Docker Buildx
+    - name: Setup Docker Buildx
+      id: setup_docker_buildx
+      uses: stacks-sbtc/actions/docker/setup-buildx-action@main
+
+    ## Login To Dockerhub
+    - name: DockerHub Login
+      if: |
+        inputs.username != '' &&
+        inputs.password != ''
+      id: dockerhub_login
+      uses: stacks-sbtc/actions/docker/login-action@main
+      with:
+        username: ${{ inputs.username }}
+        password: ${{ inputs.password }}
+        registry: ${{ inputs.registry }}

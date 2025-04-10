@@ -1,0 +1,40 @@
+name: "Docker Build Push"
+
+inputs:
+  build-args:
+    description: "List of build-time variables"
+    required: false
+  file:
+    description: "Path to the Dockerfile"
+    required: false
+  labels:
+    description: "List of metadata for an image"
+    required: false
+  platforms:
+    description: "List of target platforms for build"
+    required: false
+  push:
+    description: "Push is a shorthand for --output=type=registry"
+    required: false
+    default: "false"
+  tags:
+    description: "List of tags"
+    required: false
+  target:
+    description: "Sets the target stage to build"
+    required: false
+
+runs:
+  using: "composite"
+  steps:
+    - name: Docker Build Push
+      id: docker_build_push
+      uses: docker/build-push-action@471d1dc4e07e5cdedd4c2171150001c434f0b7a4 # v6.15.0
+      with:
+        build-args: ${{ inputs.build-args }}
+        file: ${{ inputs.file }}
+        labels: ${{ inputs.labels }}
+        platforms: ${{ inputs.platforms }}
+        push: ${{ inputs.push }}
+        tags: ${{ inputs.tags }}
+        target: ${{ inputs.target }}

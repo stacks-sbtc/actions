@@ -1,0 +1,19 @@
+name: Setup Rust Toolchain
+
+inputs:
+  components:
+    description: "Comma-separated list of components to be additionally installed"
+    required: false
+  cache-key:
+    description: "Additional cache key that can be used to further differentiate jobs"
+    required: false
+
+runs:
+  using: "composite"
+  steps:
+    - name: Setup Rust Toolchain
+      id: setup_rust_toolchain
+      uses: actions-rust-lang/setup-rust-toolchain@9399c7bb15d4c7d47b27263d024f0a4978346ba4 # v1.11.0
+      with:
+        components: ${{ inputs.components }}
+        cache-key: ${{ inputs.cache-key }}

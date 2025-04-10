@@ -1,0 +1,15 @@
+name: Setup Python
+
+inputs:
+  python-version:
+    description: "Version range or exact version of Python to use"
+    required: false
+
+runs:
+  using: "composite"
+  steps:
+    - name: Setup Python
+      id: setup_python
+      uses: actions/setup-python@8d9ed9ac5c53483de85588cdf95a591a75ab9f55 # v5.5.0
+      with:
+        python-version: ${{ env.PYTHON_VERSION }}

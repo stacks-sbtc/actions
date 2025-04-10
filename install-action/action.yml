@@ -1,0 +1,15 @@
+name: Install Action
+
+inputs:
+  tool:
+    description: "Tools to install (comma-separated list)"
+    required: true
+
+runs:
+  using: "composite"
+  steps:
+    - name: Install Action
+      id: install_action
+      uses: taiki-e/install-action@575f713d0233afba556737a7b85080563be14186 # v2.49.43
+      with:
+        tool: ${{ inputs.tool }}
