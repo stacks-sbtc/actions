@@ -8,7 +8,7 @@ Checkout the parsed repository without persisting credentials.
 
 | Input        | Description                        | Required | Default                    |
 | ------------ | ---------------------------------- | -------- | -------------------------- |
-| `repository` | The repository to checkout         | true     | `${{ github.repository }}` |
+| `repository` | The repository to checkout         | false    | `${{ github.repository }}` |
 | `ref`        | The branch, tag or SHA to checkout | false    | Default repository branch  |
 
 ## Usage
