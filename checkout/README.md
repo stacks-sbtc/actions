@@ -6,10 +6,10 @@ Checkout the parsed repository without persisting credentials.
 
 ### Inputs
 
-| Input        | Description                        | Required | Default                   |
-| ------------ | ---------------------------------- | -------- | ------------------------- |
-| `repository` | The repository to checkout         | true     |                           |
-| `ref`        | The branch, tag or SHA to checkout | false    | Default repository branch |
+| Input        | Description                        | Required | Default                    |
+| ------------ | ---------------------------------- | -------- | -------------------------- |
+| `repository` | The repository to checkout         | true     | `${{ github.repository }}` |
+| `ref`        | The branch, tag or SHA to checkout | false    | Default repository branch  |
 
 ## Usage
 

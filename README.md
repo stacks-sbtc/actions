@@ -4,6 +4,7 @@ Monorepo of composite actions used in the stacks-sbtc organisation
 
 - [attest-build-provenance](./attest-build-provenance) - Generate signed build provenance attestations for workflow artifacts
 - [aws](./aws) - Actions used for AWS configuration/login
+- [cache](./cache) - Create and use caches
 - [checkout](./checkout) - Clone the repository in the calling runner
 - [cleanup](./cleanup) - Removes unused packages/dirs from a runner, freeing around 30GB of space on a runner
 - [docker](./docker) - Setup docker on the runner and optionally log in to dockerhub

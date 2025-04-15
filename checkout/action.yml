@@ -3,11 +3,11 @@ name: Checkout Repository
 inputs:
   repository:
     description: "The repository to checkout"
-    required: true
+    required: false
+    default: ${{ github.repository }}
   ref:
     description: "The branch, tag or SHA to checkout"
     required: false
-    default: ${{ github.event.repository.default_branch }}
 
 runs:
   using: "composite"

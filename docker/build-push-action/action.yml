@@ -10,6 +10,10 @@ inputs:
   labels:
     description: "List of metadata for an image"
     required: false
+  no-cache:
+    description: "Do not use cache when building the image"
+    required: false
+    default: "false"
   platforms:
     description: "List of target platforms for build"
     required: false
@@ -34,6 +38,7 @@ runs:
         build-args: ${{ inputs.build-args }}
         file: ${{ inputs.file }}
         labels: ${{ inputs.labels }}
+        no-cache: ${{ inputs.no-cache }}
         platforms: ${{ inputs.platforms }}
         push: ${{ inputs.push }}
         tags: ${{ inputs.tags }}
