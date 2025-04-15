@@ -10,7 +10,7 @@ Build and push Docker images with Buildx
 | `build-args` | List of build-time variables                     | false    |         |
 | `file`       | Path to the Dockerfile                           | false    |         |
 | `labels`     | List of metadata for an image                    | false    |         |
-| `no-cache`   | Do not use cache when building the image         | false    | `false` |
+| `no-cache`   | Do not use cache when building the image         | false    | `true`  |
 | `platforms`  | List of target platforms for build               | false    |         |
 | `push`       | Push is a shorthand for `--output=type=registry` | false    | `false` |
 | `tags`       | List of tags                                     | false    |         |
