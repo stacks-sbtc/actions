@@ -2,7 +2,7 @@ name: Setup Uv
 
 inputs:
   version:
-    description: "Version of the Buf CLI to use"
+    description: "The version of uv to install"
     required: false
 
 runs:
