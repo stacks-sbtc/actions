@@ -7,7 +7,7 @@ inputs:
   enable-cache:
     description: "Enable uploading of the uv cache"
     required: false
-    default: "auto"
+    default: "false"
 
 runs:
   using: "composite"

@@ -6,10 +6,10 @@ Set up GitHub Actions workflow with a specific version of `uv`.
 
 ### Inputs
 
-| Input          | Description                      | Required | Default  |
-| -------------- | -------------------------------- | -------- | -------- |
-| `version`      | The version of uv to install     | false    |          |
-| `enable-cache` | Enable uploading of the uv cache | false    | `"auto"` |
+| Input          | Description                      | Required | Default   |
+| -------------- | -------------------------------- | -------- | --------- |
+| `version`      | The version of uv to install     | false    |           |
+| `enable-cache` | Enable uploading of the uv cache | false    | `"false"` |
 
 ## Usage
 
