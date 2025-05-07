@@ -1,0 +1,15 @@
+name: Setup Uv
+
+inputs:
+  version:
+    description: "Version of the Buf CLI to use"
+    required: false
+
+runs:
+  using: "composite"
+  steps:
+    - name: Setup Uv
+      id: setup_uv
+      uses: astral-sh/setup-uv@6b9c6063abd6010835644d4c2e1bef4cf5cd0fca # v6.0.1
+      with:
+        version: ${{ inputs.version }}

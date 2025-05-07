@@ -18,6 +18,7 @@ Monorepo of composite actions used in the stacks-sbtc organisation
 - [setup-pnpm](./setup-pnpm) - Install pnpm package manager
 - [setup-python](./setup-python) - Install Python
 - [setup-rust-toolchain](./setup-rust-toolchain) - Install Rust toolchain with additional components
+- [setup-uv](./setup-uv) - Set up GitHub Actions workflow with a specific version of `uv`
 - [upload-artifact](./upload-artifact) - Upload an artifact to the GitHub's workflow
 - [wait-other-jobs](./wait-other-jobs) - Wait for all or specific jobs to finish
 
