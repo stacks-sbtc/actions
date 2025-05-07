@@ -6,9 +6,10 @@ Set up GitHub Actions workflow with a specific version of `uv`.
 
 ### Inputs
 
-| Input        | Description                  | Required | Default |
-| ------------ | ---------------------------- | -------- | ------- |
-| `version`    | The version of uv to install | false    |         |
+| Input          | Description                      | Required | Default  |
+| -------------- | -------------------------------- | -------- | -------- |
+| `version`      | The version of uv to install     | false    |          |
+| `enable-cache` | Enable uploading of the uv cache | false    | `"auto"` |
 
 ## Usage
 
@@ -25,4 +26,5 @@ jobs:
         uses: stacks-sbtc/actions/setup-uv@main
         with:
           version: "0.6.5"
+          enable-cache: true
 ```
