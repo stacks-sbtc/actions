@@ -1,0 +1,20 @@
+name: Setup Uv
+
+inputs:
+  version:
+    description: "The version of uv to install"
+    required: false
+  enable-cache:
+    description: "Enable uploading of the uv cache"
+    required: false
+    default: "false"
+
+runs:
+  using: "composite"
+  steps:
+    - name: Setup Uv
+      id: setup_uv
+      uses: astral-sh/setup-uv@6b9c6063abd6010835644d4c2e1bef4cf5cd0fca # v6.0.1
+      with:
+        version: ${{ inputs.version }}
+        enable-cache: ${{ inputs.enable-cache }}
