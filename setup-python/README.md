@@ -10,6 +10,14 @@ Download and install python
 | ---------------- | ----------------------------------------------- | -------- | ------- |
 | `python-version` | Version range or exact version of Python to use | false    |         |
 
+### Outputs
+
+| Output           | Description                                                                       |
+| ---------------- | --------------------------------------------------------------------------------- |
+| `python-version` | The installed Python or PyPy version. Useful when given a version range as input. |
+| `cache-hit`      | A boolean value to indicate a cache entry was found                               |
+| `python-path`    | The absolute path to the Python or PyPy executable.                               |
+
 ## Usage
 
 ```yaml

@@ -5,6 +5,17 @@ inputs:
     description: "Version range or exact version of Python to use"
     required: false
 
+outputs:
+  python-version:
+    description: "The installed Python or PyPy version. Useful when given a version range as input."
+    value: ${{ steps.setup_python.outputs.python-version }}
+  cache-hit:
+    description: "A boolean value to indicate a cache entry was found"
+    value: ${{ steps.setup_python.outputs.cache-hit }}
+  python-path:
+    description: "The absolute path to the Python or PyPy executable."
+    value: ${{ steps.setup_python.outputs.python-path }}
+
 runs:
   using: "composite"
   steps:

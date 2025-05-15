@@ -5,6 +5,7 @@ Build and push Docker images with Buildx
 ## Documentation
 
 ### Inputs
+
 | Input        | Description                                      | Required | Default |
 | ------------ | ------------------------------------------------ | -------- |---------|
 | `build-args` | List of build-time variables                     | false    |         |
@@ -15,6 +16,14 @@ Build and push Docker images with Buildx
 | `push`       | Push is a shorthand for `--output=type=registry` | false    | `false` |
 | `tags`       | List of tags                                     | false    |         |
 | `target`     | Sets the target stage to build                   | false    |         |
+
+### Outputs
+
+| Output     | Description           |
+| ---------- | --------------------- |
+| `imageid`  | Image ID              |
+| `digest`   | Image digest          |
+| `metadata` | Build result metadata |
 
 ## Usage
 

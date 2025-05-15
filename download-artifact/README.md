@@ -11,6 +11,12 @@ Downloads one or more artifacts from GitHub to the given path.
 | `name`      | Name of the artifact to download. If unset, all artifacts are downloaded | false    |         |
 | `path`      | Destination path                                                         | false    |         |
 
+### Outputs
+
+| Output          | Description               |
+| --------------- | ------------------------- |
+| `download-path` | Path of artifact download |
+
 ## Usage
 
 ```yaml

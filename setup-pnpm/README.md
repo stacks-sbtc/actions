@@ -2,6 +2,16 @@
 
 Install pnpm package manager
 
+## Documentation
+
+### Outputs
+
+| Output     | Description                           |
+| ---------- | ------------------------------------- |
+| `dest`     | Expanded path of inputs#dest          |
+| `bin_dest` | Location of `pnpm` and `pnpx` command |
+
+
 ## Usage
 
 ```yaml

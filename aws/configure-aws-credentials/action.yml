@@ -8,6 +8,20 @@ inputs:
     description: The Amazon Resource Name (ARN) of the role to assume.
     required: true
 
+outputs:
+  aws-account-id:
+    description: "The AWS account ID for the provided credentials"
+    value: ${{ steps.configure_aws_credentials.outputs.aws-account-id }}
+  aws-access-key-id:
+    description: "The AWS access key ID for the provided credentials"
+    value: ${{ steps.configure_aws_credentials.outputs.aws-access-key-id }}
+  aws-secret-access-key:
+    description: "The AWS secret access key for the provided credentials"
+    value: ${{ steps.configure_aws_credentials.outputs.aws-secret-access-key }}
+  aws-session-token:
+    description: "The AWS session token for the provided credentials"
+    value: ${{ steps.configure_aws_credentials.outputs.aws-session-token }}
+
 runs:
   using: "composite"
   steps:

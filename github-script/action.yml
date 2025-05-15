@@ -5,6 +5,11 @@ inputs:
     description: "The script to run"
     required: true
 
+outputs:
+  result:
+    description: "The return value of the script, stringified with `JSON.stringify`"
+    value: ${{ steps.github_script.outputs.result }}
+
 runs:
   using: "composite"
   steps:

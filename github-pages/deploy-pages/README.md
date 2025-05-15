@@ -2,6 +2,14 @@
 
 Deploy action artifacts to GitHub Pages
 
+## Documentation
+
+### Outputs
+
+| Output     | Description                  |
+| ---------- | ---------------------------- |
+| `page_url` | URL to deployed GitHub Pages |
+
 ## Usage
 
 ```yaml

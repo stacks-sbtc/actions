@@ -28,6 +28,17 @@ inputs:
     description: "Sets the target stage to build"
     required: false
 
+outputs:
+  imageid:
+    description: "Image ID"
+    value: ${{ steps.docker_build_push.outputs.imageid }}
+  digest:
+    description: "Image digest"
+    value: ${{ steps.docker_build_push.outputs.digest }}
+  metadata:
+    description: "Build result metadata"
+    value: ${{ steps.docker_build_push.outputs.metadata }}
+
 runs:
   using: "composite"
   steps:

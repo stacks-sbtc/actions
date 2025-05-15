@@ -10,6 +10,12 @@ Execute a snippet of JavaScript in the GitHub runner
 | -------- | ----------------- | -------- | ------- |
 | `script` | The script to run | true     |         |
 
+### Outputs
+
+| Output   | Description                                                       |
+| -------- | ----------------------------------------------------------------- |
+| `result` | The return value of the script, stringified with `JSON.stringify` |
+
 ## Usage
 
 ```yaml

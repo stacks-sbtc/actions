@@ -8,6 +8,17 @@ inputs:
     description: Digest of the subject for which provenance will be generated
     required: true
 
+outputs:
+  bundle-path:
+    description: "The path to the file containing the attestation bundle."
+    value: ${{ steps.generate_artifact_attestation.outputs.bundle-path }}
+  attestation-id:
+    description: "The ID of the attestation."
+    value: ${{ steps.generate_artifact_attestation.outputs.attestation-id }}
+  attestation-url:
+    description: "The URL for the attestation summary."
+    value: ${{ steps.generate_artifact_attestation.outputs.attestation-url }}
+
 runs:
   using: "composite"
   steps:

@@ -8,6 +8,35 @@ inputs:
     description: "List of tags as key-value pair attributes"
     required: false
 
+outputs:
+  version:
+    description: "Generated Docker image version"
+    value: ${{ steps.docker_metadata.outputs.version }}
+  tags:
+    description: "Generated Docker tags"
+    value: ${{ steps.docker_metadata.outputs.tags }}
+  labels:
+    description: "Generated Docker labels"
+    value: ${{ steps.docker_metadata.outputs.labels }}
+  annotations:
+    description: "Generated annotations"
+    value: ${{ steps.docker_metadata.outputs.annotations }}
+  json:
+    description: "JSON output of tags and labels"
+    value: ${{ steps.docker_metadata.outputs.json }}
+  bake-file-tags:
+    description: "Bake definition file with tags"
+    value: ${{ steps.docker_metadata.outputs.bake-file-tags }}
+  bake-file-labels:
+    description: "Bake definition file with labels"
+    value: ${{ steps.docker_metadata.outputs.bake-file-labels }}
+  bake-file-annotations:
+    description: "Bake definition file with annotations"
+    value: ${{ steps.docker_metadata.outputs.bake-file-annotations }}
+  bake-file:
+    description: "Bake definition file with tags and labels"
+    value: ${{ steps.docker_metadata.outputs.bake-file }}
+
 runs:
   using: "composite"
   steps:

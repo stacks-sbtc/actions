@@ -2,6 +2,15 @@
 
 Setup Docker Buildx
 
+## Documentation
+
+| Output      | Description                                                  |
+| ----------- | ------------------------------------------------------------ |
+| `name`      | Builder name                                                 |
+| `driver`    | Builder driver                                               |
+| `platforms` | Builder node platforms (preferred or available)              |
+| `nodes`     | Builder nodes metadata                                       |
+
 ## Usage
 
 ```yaml

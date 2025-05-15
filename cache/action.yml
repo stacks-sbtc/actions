@@ -8,6 +8,11 @@ inputs:
     description: "An explicit key for restoring and saving the cache"
     required: true
 
+outputs:
+  cache-hit:
+    description: "A boolean value to indicate an exact match was found for the primary key"
+    value: ${{ steps.cache.outputs.cache-hit }}
+
 runs:
   using: "composite"
   steps:
