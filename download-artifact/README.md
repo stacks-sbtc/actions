@@ -15,7 +15,7 @@ Downloads one or more artifacts from GitHub to the given path.
 
 | Output          | Description               |
 | --------------- | ------------------------- |
-| `download-path` | Path of artifact download |
+| `download_path` | Path of artifact download |
 
 ## Usage
 

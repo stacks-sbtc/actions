@@ -16,9 +16,9 @@ Uploads an artifact of the given path with the given name to GitHub.
 
 | Output            | Description                                                  |
 | ----------------- | ------------------------------------------------------------ |
-| `artifact-id`     | A unique identifier for the artifact that was just uploaded. |
-| `artifact-url`    | A download URL for the artifact that was just uploaded       |
-| `artifact-digest` | SHA-256 digest for the artifact that was just uploaded       |
+| `artifact_id`     | A unique identifier for the artifact that was just uploaded. |
+| `artifact_url`    | A download URL for the artifact that was just uploaded       |
+| `artifact_digest` | SHA-256 digest for the artifact that was just uploaded       |
 
 ## Usage
 

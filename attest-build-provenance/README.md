@@ -15,9 +15,9 @@ Generate signed build provenance attestations for workflow artifacts
 
 | Output            | Description                                             |
 | ----------------- | ------------------------------------------------------- |
-| `bundle-path`     | The path to the file containing the attestation bundle. |
-| `attestation-id`  | The ID of the attestation.                              |
-| `attestation-url` | The URL for the attestation summary.                    |
+| `bundle_path`     | The path to the file containing the attestation bundle. |
+| `attestation_id`  | The ID of the attestation.                              |
+| `attestation_url` | The URL for the attestation summary.                    |
 
 ## Usage
 

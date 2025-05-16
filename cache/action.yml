@@ -9,7 +9,7 @@ inputs:
     required: true
 
 outputs:
-  cache-hit:
+  cache_hit:
     description: "A boolean value to indicate an exact match was found for the primary key"
     value: ${{ steps.cache.outputs.cache-hit }}
 

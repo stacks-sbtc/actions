@@ -15,7 +15,7 @@ Create and use caches for dependencies and other commonly reused files.
 
 | Output      | Description                                                              |
 | ----------- |------------------------------------------------------------------------- |
-| `cache-hit` | A boolean value to indicate an exact match was found for the primary key |
+| `cache_hit` | A boolean value to indicate an exact match was found for the primary key |
 
 ## Usage
 

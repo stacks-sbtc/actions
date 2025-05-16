@@ -9,10 +9,10 @@ inputs:
     required: false
 
 outputs:
-  cache-hit: 
+  cache_hit: 
     description: "A boolean value to indicate if a cache was hit."
     value: ${{ steps.setup_node.outputs.cache-hit }}
-  node-version:
+  node_version:
     description: "The installed node version."
     value: ${{ steps.setup_node.outputs.node-version }}
 

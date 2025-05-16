@@ -9,13 +9,13 @@ inputs:
     required: false
 
 outputs:
-  rustc-version:
+  rustc_version:
     description: "Version as reported by `rustc --version`"
     value: ${{ steps.setup_rust_toolchain.outputs.rustc-version }}
-  cargo-version:
+  cargo_version:
     description: "Version as reported by `cargo --version`"
     value: ${{ steps.setup_rust_toolchain.outputs.cargo-version }}
-  rustup-version:
+  rustup_version:
     description: "Version as reported by `rustup --version`"
     value: ${{ steps.setup_rust_toolchain.outputs.rustup-version }}
   cachekey:

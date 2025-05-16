@@ -20,10 +20,10 @@ Extract metadata from GitHub
 | `labels`                | Generated Docker labels                   |
 | `annotations`           | Generated annotations                     |
 | `json`                  | JSON output of tags and labels            |
-| `bake-file-tags`        | Bake definition file with tags            |
-| `bake-file-labels`      | Bake definition file with labels          |
-| `bake-file-annotations` | Bake definition file with annotations     |
-| `bake-file`             | Bake definition file with tags and labels |
+| `bake_file_tags`        | Bake definition file with tags            |
+| `bake_file_labels`      | Bake definition file with labels          |
+| `bake_file_annotations` | Bake definition file with annotations     |
+| `bake_file`             | Bake definition file with tags and labels |
 
 ## Usage
 

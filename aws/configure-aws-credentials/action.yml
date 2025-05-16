@@ -9,16 +9,16 @@ inputs:
     required: true
 
 outputs:
-  aws-account-id:
+  aws_account_id:
     description: "The AWS account ID for the provided credentials"
     value: ${{ steps.configure_aws_credentials.outputs.aws-account-id }}
-  aws-access-key-id:
+  aws_access_key_id:
     description: "The AWS access key ID for the provided credentials"
     value: ${{ steps.configure_aws_credentials.outputs.aws-access-key-id }}
-  aws-secret-access-key:
+  aws_secret_access_key:
     description: "The AWS secret access key for the provided credentials"
     value: ${{ steps.configure_aws_credentials.outputs.aws-secret-access-key }}
-  aws-session-token:
+  aws_session_token:
     description: "The AWS session token for the provided credentials"
     value: ${{ steps.configure_aws_credentials.outputs.aws-session-token }}
 

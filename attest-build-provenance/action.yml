@@ -9,13 +9,13 @@ inputs:
     required: true
 
 outputs:
-  bundle-path:
+  bundle_path:
     description: "The path to the file containing the attestation bundle."
     value: ${{ steps.generate_artifact_attestation.outputs.bundle-path }}
-  attestation-id:
+  attestation_id:
     description: "The ID of the attestation."
     value: ${{ steps.generate_artifact_attestation.outputs.attestation-id }}
-  attestation-url:
+  attestation_url:
     description: "The URL for the attestation summary."
     value: ${{ steps.generate_artifact_attestation.outputs.attestation-url }}
 

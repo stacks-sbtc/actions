@@ -15,10 +15,10 @@ Set up GitHub Actions workflow with a specific version of `uv`.
 
 | Output       | Description                                         |
 | ------------ | --------------------------------------------------- |
-| `uv-version` | The installed uv version. Useful when using latest. |
-| `uv-path`    | The path to the installed uv binary.                |
-| `uvx-path`   | The path to the installed uvx binary.               |
-| `cache-hit`  | A boolean value to indicate a cache entry was found |
+| `uv_version` | The installed uv version. Useful when using latest. |
+| `uv_path`    | The path to the installed uv binary.                |
+| `uvx_path`   | The path to the installed uvx binary.               |
+| `cache_hit`  | A boolean value to indicate a cache entry was found |
 
 ## Usage
 

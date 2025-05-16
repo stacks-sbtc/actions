@@ -9,7 +9,7 @@ inputs:
     required: false
 
 outputs:
-  download-path:
+  download_path:
     description: "Path of artifact download"
     value: ${{ steps.download_artifact.outputs.download-path }}
 

@@ -14,9 +14,9 @@ Download and install python
 
 | Output           | Description                                                                       |
 | ---------------- | --------------------------------------------------------------------------------- |
-| `python-version` | The installed Python or PyPy version. Useful when given a version range as input. |
-| `cache-hit`      | A boolean value to indicate a cache entry was found                               |
-| `python-path`    | The absolute path to the Python or PyPy executable.                               |
+| `python_version` | The installed Python or PyPy version. Useful when given a version range as input. |
+| `cache_hit`      | A boolean value to indicate a cache entry was found                               |
+| `python_path`    | The absolute path to the Python or PyPy executable.                               |
 
 ## Usage
 

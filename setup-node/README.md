@@ -15,8 +15,8 @@ Download and install Node.js
 
 | Output         | Description                                     |
 | -------------- | ----------------------------------------------- |
-| `cache-hit`    | A boolean value to indicate if a cache was hit. |
-| `node-version` | The installed node version.                     |
+| `cache_hit`    | A boolean value to indicate if a cache was hit. |
+| `node_version` | The installed node version.                     |
 
 ## Usage
 

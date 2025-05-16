@@ -10,16 +10,16 @@ inputs:
     default: "false"
 
 outputs:
-  uv-version:
+  uv_version:
     description: "The installed uv version. Useful when using latest."
     value: ${{ steps.setup_uv.outputs.uv-version }}
-  uv-path:
+  uv_path:
     description: "The path to the installed uv binary."
     value: ${{ steps.setup_uv.outputs.uv-path }}
-  uvx-path:
+  uvx_path:
     description: "The path to the installed uvx binary."
     value: ${{ steps.setup_uv.outputs.uvx-path }}
-  cache-hit:
+  cache_hit:
     description: "A boolean value to indicate a cache entry was found"
     value: ${{ steps.setup_uv.outputs.cache-hit }}
 

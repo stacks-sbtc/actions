@@ -24,16 +24,16 @@ outputs:
   json:
     description: "JSON output of tags and labels"
     value: ${{ steps.docker_metadata.outputs.json }}
-  bake-file-tags:
+  bake_file_tags:
     description: "Bake definition file with tags"
     value: ${{ steps.docker_metadata.outputs.bake-file-tags }}
-  bake-file-labels:
+  bake_file_labels:
     description: "Bake definition file with labels"
     value: ${{ steps.docker_metadata.outputs.bake-file-labels }}
-  bake-file-annotations:
+  bake_file_annotations:
     description: "Bake definition file with annotations"
     value: ${{ steps.docker_metadata.outputs.bake-file-annotations }}
-  bake-file:
+  bake_file:
     description: "Bake definition file with tags and labels"
     value: ${{ steps.docker_metadata.outputs.bake-file }}
 

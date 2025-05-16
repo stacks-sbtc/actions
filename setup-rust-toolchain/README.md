@@ -15,9 +15,9 @@ Installs a Rust toolchain using rustup, with an option of adding extra component
 
 | Output           | Description                                                            |
 | ---------------- | ---------------------------------------------------------------------- |
-| `rustc-version`  | Version as reported by `rustc --version`                               |
-| `cargo-version`  | Version as reported by `cargo --version`                               |
-| `rustup-version` | Version as reported by `rustup --version`                              |
+| `rustc_version`  | Version as reported by `rustc --version`                               |
+| `cargo_version`  | Version as reported by `cargo --version`                               |
+| `rustup_version` | Version as reported by `rustup --version`                              |
 | `cachekey`       | A short hash of the rustc version, appropriate for use as a cache key. |
 
 ## Usage
