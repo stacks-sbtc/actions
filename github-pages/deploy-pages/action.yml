@@ -1,5 +1,10 @@
 name: Deploy Pages
 
+outputs:
+  page_url:
+    description: "URL to deployed GitHub Pages"
+    value: ${{ steps.deploy_pages.outputs.page_url }}
+
 runs:
   using: "composite"
   steps:

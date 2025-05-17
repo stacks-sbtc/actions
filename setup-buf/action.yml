@@ -9,6 +9,14 @@ inputs:
     required: false
     default: "false"
 
+outputs:
+  buf_version:
+    description: "Version of the Buf CLI used."
+    value: ${{ steps.setup_buf.outputs.buf_version }}
+  buf_path:
+    description: "Path to the Buf CLI binary."
+    value: ${{ steps.setup_buf.outputs.buf_path }}
+
 runs:
   using: "composite"
   steps:

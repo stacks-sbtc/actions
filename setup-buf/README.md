@@ -11,6 +11,13 @@ Setup `buf` within a workflow to check for build, lint, format, and breaking cha
 | `version`    | Version of the Buf CLI to use                                    | false    |           |
 | `setup_only` | Setup only the buf environment, without executing other commands | false    | `"false"` |
 
+### Outputs
+
+| Output        | Description                  |
+| ------------- | ---------------------------- |
+| `buf_version` | Version of the Buf CLI used. |
+| `buf_path`    | Path to the Buf CLI binary.  |
+
 ## Usage
 
 ```yaml

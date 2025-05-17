@@ -8,6 +8,20 @@ inputs:
     description: "Additional cache key that can be used to further differentiate jobs"
     required: false
 
+outputs:
+  rustc_version:
+    description: "Version as reported by `rustc --version`"
+    value: ${{ steps.setup_rust_toolchain.outputs.rustc-version }}
+  cargo_version:
+    description: "Version as reported by `cargo --version`"
+    value: ${{ steps.setup_rust_toolchain.outputs.cargo-version }}
+  rustup_version:
+    description: "Version as reported by `rustup --version`"
+    value: ${{ steps.setup_rust_toolchain.outputs.rustup-version }}
+  cachekey:
+    description: "A short hash of the rustc version, appropriate for use as a cache key."
+    value: ${{ steps.setup_rust_toolchain.outputs.cachekey }}
+
 runs:
   using: "composite"
   steps:

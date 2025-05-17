@@ -1,5 +1,10 @@
 name: "Setup QEMU"
 
+outputs:
+  platforms:
+    description: "Available platforms (comma separated)"
+    value: ${{ steps.setup_qemu.outputs.platforms }}
+
 runs:
   using: "composite"
   steps:

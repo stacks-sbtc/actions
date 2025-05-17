@@ -8,6 +8,14 @@ inputs:
     description: "Used to specify a package manager for caching in the default directory"
     required: false
 
+outputs:
+  cache_hit: 
+    description: "A boolean value to indicate if a cache was hit."
+    value: ${{ steps.setup_node.outputs.cache-hit }}
+  node_version:
+    description: "The installed node version."
+    value: ${{ steps.setup_node.outputs.node-version }}
+
 runs:
   using: "composite"
   steps:

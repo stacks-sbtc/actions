@@ -10,6 +10,12 @@ Package and upload an artifact that can be deployed to GitHub Pages
 | ------ | -------------------------------------------------- | -------- | ------- |
 | `path` | Path of the directory containing the static assets | true     |         |
 
+### Outputs
+
+| Output        | Description                               |
+| ------------- | ----------------------------------------- |
+| `artifact_id` | The ID of the artifact that was uploaded. |
+
 ## Usage
 
 ```yaml

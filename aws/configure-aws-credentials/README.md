@@ -11,6 +11,15 @@ Configure the AWS credentials and region environment variables for use in other 
 | `role-to-assume` | The Amazon Resource Name (ARN) of the role to assume. | true     |         |
 | `aws-region`     | AWS Region                                            | true     |         |
 
+### Outputs
+
+| Output                  | Description                                            |
+| ----------------------- | ------------------------------------------------------ |
+| `aws_account_id`        | The AWS account ID for the provided credentials        |
+| `aws_access_key_id`     | The AWS access key ID for the provided credentials     |
+| `aws_secret_access_key` | The AWS secret access key for the provided credentials |
+| `aws_session_token`     | The AWS session token for the provided credentials     |
+
 ## Usage
 
 ```yaml

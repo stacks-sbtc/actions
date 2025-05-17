@@ -2,6 +2,17 @@
 
 Enable Pages and extract various metadata about a site
 
+## Documentation
+
+### Outputs
+
+| Output      | Description                      |
+| ----------- | -------------------------------- |
+| `base_url`  | GitHub Pages site full base URL  |
+| `origin`    | GitHub Pages site origin         |
+| `host`      | GitHub Pages site host           |
+| `base_path` | GitHub Pages site full base path |
+
 ## Usage
 
 ```yaml

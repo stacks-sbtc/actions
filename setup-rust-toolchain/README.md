@@ -11,6 +11,15 @@ Installs a Rust toolchain using rustup, with an option of adding extra component
 | `components` | Comma-separated list of components to be additionally installed     | false    |         |
 | `cache-key`  | Additional cache key that can be used to further differentiate jobs | false    |         |
 
+### Outputs
+
+| Output           | Description                                                            |
+| ---------------- | ---------------------------------------------------------------------- |
+| `rustc_version`  | Version as reported by `rustc --version`                               |
+| `cargo_version`  | Version as reported by `cargo --version`                               |
+| `rustup_version` | Version as reported by `rustup --version`                              |
+| `cachekey`       | A short hash of the rustc version, appropriate for use as a cache key. |
+
 ## Usage
 
 ```yaml

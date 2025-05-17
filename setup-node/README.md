@@ -11,6 +11,13 @@ Download and install Node.js
 | `node-version` | Version spec of the version to use                                     | false    |         |
 | `cache`        | Used to specify a package manager for caching in the default directory | false    |         |
 
+### Outputs
+
+| Output         | Description                                     |
+| -------------- | ----------------------------------------------- |
+| `cache_hit`    | A boolean value to indicate if a cache was hit. |
+| `node_version` | The installed node version.                     |
+
 ## Usage
 
 ```yaml

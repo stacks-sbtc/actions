@@ -13,6 +13,13 @@ Wait for all or specific jobs, even if they are running in other workflows. If a
 | `retry-method`                      | How to wait for next polling                            | false    | `"equal_intervals"`  |
 | `wait-list`                         | Wait only these jobs                                    | false    | `"[]"`               |
 
+### Outputs
+
+| Output       | Description                                                         |
+| ------------ | ------------------------------------------------------------------- |
+| `parameters` | Parsed values from `with` and some context.                         |
+| `dump`       | A file path for collected resources which keeps fields then logged. |
+
 ## Usage
 
 ```yaml

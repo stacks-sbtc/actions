@@ -1,5 +1,13 @@
 name: Setup Pnpm
 
+outputs:
+  dest:
+    description: "Expanded path of inputs#dest"
+    value: ${{ steps.setup_pnpm.outputs.dest }}
+  bin_dest:
+    description: "Location of `pnpm` and `pnpx` command"
+    value: ${{ steps.setup_pnpm.outputs.bin_dest }}
+
 runs:
   using: "composite"
   steps:

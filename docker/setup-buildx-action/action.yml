@@ -1,5 +1,19 @@
 name: "Setup Buildx"
 
+outputs:
+  name:
+    description: "Builder name"
+    value: ${{ steps.setup_buildx.outputs.name }}
+  driver:
+    description: "Builder driver"
+    value: ${{ steps.setup_buildx.outputs.driver }}
+  platforms:
+    description: "Builder node platforms (preferred or available)"
+    value: ${{ steps.setup_buildx.outputs.platforms }}
+  nodes:
+    description: "Builder nodes metadata"
+    value: ${{ steps.setup_buildx.outputs.nodes }}
+
 runs:
   using: "composite"
   steps:

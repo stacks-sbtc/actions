@@ -11,6 +11,14 @@ Generate signed build provenance attestations for workflow artifacts
 | `subject-name`     | Subject name as it should appear in the attestation            | true     |         |
 | `subject-digest`   | Digest of the subject for which provenance will be generated   | true     |         |
 
+### Outputs
+
+| Output            | Description                                             |
+| ----------------- | ------------------------------------------------------- |
+| `bundle_path`     | The path to the file containing the attestation bundle. |
+| `attestation_id`  | The ID of the attestation.                              |
+| `attestation_url` | The URL for the attestation summary.                    |
+
 ## Usage
 
 ```yaml

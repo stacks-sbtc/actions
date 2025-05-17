@@ -2,6 +2,14 @@
 
 Setup QEMU for multi-arch builds
 
+## Documentation
+
+### Outputs
+
+| Output      | Description                           |
+| ----------- | ------------------------------------- |
+| `platforms` | Available platforms (comma separated) |
+
 ## Usage
 
 ```yaml

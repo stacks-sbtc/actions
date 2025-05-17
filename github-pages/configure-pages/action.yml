@@ -1,5 +1,19 @@
 name: Configure Pages
 
+outputs:
+  base_url:
+    description: "GitHub Pages site full base URL"
+    value: ${{ steps.configure_pages.outputs.base_url }}
+  origin:
+    description: "GitHub Pages site origin"
+    value: ${{ steps.configure_pages.outputs.origin }}
+  host:
+    description: "GitHub Pages site host"
+    value: ${{ steps.configure_pages.outputs.host }}
+  base_path:
+    description: "GitHub Pages site full base path"
+    value: ${{ steps.configure_pages.outputs.base_path }}
+
 runs:
   using: "composite"
   steps:

@@ -18,6 +18,14 @@ inputs:
     required: false
     default: "[]"
 
+outputs:
+  parameters:
+    description: "Parsed values from `with` and some context."
+    value: ${{ steps.wait_other_jobs.outputs.parameters }}
+  dump:
+    description: "A file path for collected resources which keeps fields than logged."
+    value: ${{ steps.wait_other_jobs.outputs.dump }}
+
 runs:
   using: "composite"
   steps:

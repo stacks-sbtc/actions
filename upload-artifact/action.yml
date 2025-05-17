@@ -13,6 +13,17 @@ inputs:
     required: false
     default: "false"
 
+outputs:
+  artifact_id:
+    description: "A unique identifier for the artifact that was just uploaded."
+    value: ${{ steps.upload_artifact.outputs.artifact-id }}
+  artifact_url:
+    description: "A download URL for the artifact that was just uploaded"
+    value: ${{ steps.upload_artifact.outputs.artifact-url }}
+  artifact_digest:
+    description: "SHA-256 digest for the artifact that was just uploaded"
+    value: ${{ steps.upload_artifact.outputs.artifact-digest }}
+
 runs:
   using: "composite"
   steps:

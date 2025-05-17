@@ -2,6 +2,14 @@
 
 Logs in the local Docker client to one or more Amazon ECR Private registries or an Amazon ECR Public registry.
 
+## Documentation
+
+### Outputs
+
+| Output     | Description                                        |
+| ---------- | -------------------------------------------------- |
+| `registry` | The URI of the ECR Private or ECR Public registry. |
+
 ## Usage
 
 ```yaml
