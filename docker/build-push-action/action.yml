@@ -54,3 +54,4 @@ runs:
         push: ${{ inputs.push }}
         tags: ${{ inputs.tags }}
         target: ${{ inputs.target }}
+        context: .
