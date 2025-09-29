@@ -1,0 +1,15 @@
+name: Setup Rust Toolchain
+
+inputs:
+  terraform-version:
+    description: "The version of Terraform CLI to install."
+    required: false
+
+runs:
+  using: "composite"
+  steps:
+    - name: Setup Terraform
+      id: setup_terraform
+      uses: hashicorp/setup-terraform@b9cd54a3c349d3f38e8881555d616ced269862dd #v3.1.2
+      with:
+        terraform_version: ${{ inputs.terraform-version }}
