@@ -1,5 +1,4 @@
-name: Setup Rust Toolchain
-
+name: Setup Terraform
 inputs:
   terraform-version:
     description: "The version of Terraform CLI to install."
