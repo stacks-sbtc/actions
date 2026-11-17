@@ -14,6 +14,7 @@ Build and push Docker images with Buildx
 | `no-cache`   | Do not use cache when building the image         | false    | `true`  |
 | `platforms`  | List of target platforms for build               | false    |         |
 | `push`       | Push is a shorthand for `--output=type=registry` | false    | `false` |
+| `secrets`    | List of secrets to expose to the build           | false    |         |
 | `tags`       | List of tags                                     | false    |         |
 | `target`     | Sets the target stage to build                   | false    |         |
 
