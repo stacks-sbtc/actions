@@ -1,5 +1,15 @@
 name: "Setup QEMU"
 
+inputs:
+  image:
+    description: "QEMU static binaries Docker image"
+    required: false
+    default: "docker.io/tonistiigi/binfmt:qemu-v10.2.3@sha256:400a4873b838d1b89194d982c45e5fb3cda4593fbfd7e08a02e76b03b21166f0"
+  platforms:
+    description: "Platforms to install (comma separated)"
+    required: false
+    default: "all"
+
 outputs:
   platforms:
     description: "Available platforms (comma separated)"
@@ -8,6 +18,23 @@ outputs:
 runs:
   using: "composite"
   steps:
+    ## Same commands docker/setup-qemu-action runs; that action is not on the org allow-list.
     - name: Setup QEMU
       id: setup_qemu
-      uses: docker/setup-qemu-action@29109295f81e9208d7d86ff1c6c12d2833863392 # v3.6.0
+      shell: bash
+      env:
+        QEMU_IMAGE: ${{ inputs.image }}
+        QEMU_PLATFORMS: ${{ inputs.platforms }}
+      run: |
+        set -euo pipefail
+
+        docker run --rm --privileged "${QEMU_IMAGE}" --install "${QEMU_PLATFORMS}"
+
+        platforms=$(docker run --rm --privileged "${QEMU_IMAGE}" | jq -r '.supported | join(",")')
+        if [ -z "${platforms}" ]; then
+          echo "::error::QEMU setup reported no supported platforms."
+          exit 1
+        fi
+
+        echo "Available platforms: ${platforms}"
+        echo "platforms=${platforms}" >> "$GITHUB_OUTPUT"
